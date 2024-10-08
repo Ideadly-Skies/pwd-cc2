@@ -77,11 +77,17 @@ export default function TestimonialSlider(): JSX.Element {
 
           {/* Right Section - Text Content */}
           <div className="w-full lg:w-2/3">
+
+            {/*  */}
+            <div className="flex items-start">
+              <svg className="w-10 h-10 text-blue-600 align-self-start" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+              </svg>
+            </div>
+
             {/* Quote */}
-            <p className="text-2xl lg:text-3xl font-bold leading-snug text-[#0D2B70] mb-4">
-              <span className="text-4xl text-[#0D2B70] mr-2">“</span>
+            <p className="text-2xl lg:text-3xl font-bold leading-snug text-[#0D2B70] mb-4 mt-4">
               {testimonials[currentIndex].quote}
-              <span className="text-4xl text-[#0D2B70] ml-2">”</span>
             </p>
 
             {/* Name and Position */}

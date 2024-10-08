@@ -2,12 +2,18 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
+        dangerouslyAllowSVG: true,
         remotePatterns: [
-        {
-            protocol: 'https',
-            hostname: 'wp.sfdcdigital.com',
-            pathname: '/en-us/wp-content/uploads/**', // Adjust the pathname based on the image path structure
-        },
+            {
+                protocol: 'https',
+                hostname: 'wp.sfdcdigital.com',
+                pathname: '**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'randomuser.me',
+                pathname: '**',
+            },
         ],
     },
 };
