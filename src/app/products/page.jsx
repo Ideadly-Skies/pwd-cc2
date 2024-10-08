@@ -470,7 +470,7 @@ export default function CreateProductPage() {
             All Salesforce products. One integrated platform.
           </h2>
           <p className="text-lg text-gray-600 mt-4 mb-8 leading-relaxed max-w-2xl mx-auto">
-            Every solution in your Customer 360 works together on one platform, so it's easier for your agents, employees, and data to work together, too. Click on the icons below to learn more.
+            Every solution in your Customer 360 works together on one platform, so it&apos;s easier for your agents, employees, and data to work together, too. Click on the icons below to learn more.
           </p>
           {/* Watch Demo Button */}
           <a className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all">
