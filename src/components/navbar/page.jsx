@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { IoMdSearch } from "react-icons/io";
 import { BsGlobe2 } from "react-icons/bs";
 import { FaUser } from "react-icons/fa";
+import { VscThreeBars } from 'react-icons/vsc';
 
 function Navbar() {
     const navigation = [
@@ -68,6 +69,30 @@ function Navbar() {
                         <Link href="/" className="px-4 py-2 text-white bg-green-700 rounded-md text-sm font-semibold hover:bg-green-800 transition-colors">
                             Try for Free
                         </Link>
+                    </div>
+                    
+                    {/* drawer for mobile app */}
+                    <div className="drawer lg:hidden">
+                        <input id="my-drawer" type="checkbox" className="drawer-toggle"/>
+                        <div className="drawer-content">
+                            <label htmlFor="my-drawer" className="btn bg-white border-none shadow-none drawer-button">
+                                <VscThreeBars className='text-2xl'/>
+                            </label>
+                        </div>
+                        <div className="drawer-side">
+                            <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
+                            <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+                                {/* Sidebar content here */}
+                                {navigation.map((menu, index) => (
+                                    <li key={index} className="nav__item">
+                                        <Link href={index <= 2 ? `/${menu.toLowerCase().replace(/\s+/g, '-')}` : '/'} className="hover:text-blue-600 transition-colors">
+                                            {menu}
+                                        </Link>
+                                    </li>
+                                ))}
+
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </nav>
