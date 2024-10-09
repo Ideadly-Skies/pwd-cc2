@@ -43,7 +43,7 @@ export default function TestimonialSlider(): JSX.Element {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
   // State to determine if the slider is being hovered over
-//   const [isHovered, setIsHovered] = useState<boolean>(false);
+  //   const [isHovered, setIsHovered] = useState<boolean>(false);
 
   // Function to show the previous testimonial
   const prevSlide = (): void => {

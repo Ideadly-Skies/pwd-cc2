@@ -9,6 +9,7 @@ import Data from "../../../public/img/home/Data.png"
 import { FaExternalLinkAlt } from "react-icons/fa"; // Importing the external link icon
 import { useState } from "react";
 import Link from 'next/link';
+import ImageSlider from "../../components/TestimonialSlider/page"
 
 // import image
 import iconAI from "../../../public/icons/icon-ai.svg"
@@ -520,6 +521,10 @@ export default function CreateProductPage() {
         </div>
 
       </Container>
+
+      <Container className="w-full px-8 my-16 lg:px-24 py-12 bg-white rounded-lg shadow-md border border-gray-200">
+        <ImageSlider/> 
+      </Container> 
 
     </>    
   );

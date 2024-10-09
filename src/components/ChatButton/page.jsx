@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import salesforceLogo from '../../../public/img/salesforce-logo.png'
-
+  
 function ChatButton() {
   return (
     <div className="fixed bottom-4 right-10 z-50 -translate-y-8">

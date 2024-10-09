@@ -9,7 +9,7 @@ import heroImg3 from "../../../public/img/home/hero3.png"
 import heroImg4 from "../../../public/img/home/hero6.png"
 
 import heroBg from "../../../public/img/home/hero-bg-1.png"
-import ImageSlider from "../TestimonialSlider/page";
+// import ImageSlider from "../TestimonialSlider/page";
 
 // import story cards here
 import storyCard1 from "../../../public/img/home/our-story-card-customer-success.png"
@@ -341,9 +341,9 @@ export const HomePage = () => {
       </Container>
 
       {/* Home Section 8 */}
-      <Container className="w-full px-8 my-16 lg:px-24 py-12 bg-white rounded-lg shadow-md border border-gray-200">
+      {/* <Container className="w-full px-8 my-16 lg:px-24 py-12 bg-white rounded-lg shadow-md border border-gray-200">
         <ImageSlider/> 
-      </Container> 
+      </Container>  */}
 
       {/* Home Section 9 */}
       <Container className="flex flex-col items-center justify-center my-4 py-16 px-8 lg:px-24 overflow-hidden bg-white">
