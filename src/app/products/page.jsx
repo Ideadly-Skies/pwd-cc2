@@ -8,6 +8,7 @@ import CRMApps from "../../../public/img/home/crm-apps.png"
 import Data from "../../../public/img/home/Data.png"
 import { FaExternalLinkAlt } from "react-icons/fa"; // Importing the external link icon
 import { useState } from "react";
+import Link from 'next/link';
 
 // import image
 import iconAI from "../../../public/icons/icon-ai.svg"
@@ -236,9 +237,9 @@ export default function CreateProductPage() {
               Augment every employee and serve customers 24/7 with agents that assist and take action autonomously in sales, service, marketing, commerce, and more.
             </p>
             {/* Link */}
-            <a href="/products" className="text-blue-600 hover:text-blue-700 font-semibold">
+            <Link href="/products" className="text-blue-600 hover:text-blue-700 font-semibold">
               Get started with Agentforce
-            </a>
+            </Link>
           </div>
 
           {/* Card 2 - Data Cloud */}
@@ -262,9 +263,9 @@ export default function CreateProductPage() {
               Easily connect structured and unstructured data with Salesforce using zero copy to create a single source of truth that drives action across agents, apps, automation, and more.
             </p>
             {/* Link */}
-            <a href="/products" className="text-blue-600 hover:text-blue-700 font-semibold">
+            <Link href="/products" className="text-blue-600 hover:text-blue-700 font-semibold">
               Learn about Data Cloud
-            </a>
+            </Link>
           </div>
 
           {/* Card 3 - Customer 360 */}
@@ -288,9 +289,9 @@ export default function CreateProductPage() {
               Get a complete view of your customers on one platform and create a seamless handoff between agents and employees across sales, service, marketing, commerce, and more.
             </p>
             {/* Link */}
-            <a href="/products" className="text-blue-600 hover:text-blue-700 font-semibold">
+            <Link href="/products" className="text-blue-600 hover:text-blue-700 font-semibold">
               Build your Customer 360
-            </a>
+            </Link>
           </div>
         </div>
       </Container>
@@ -356,10 +357,10 @@ export default function CreateProductPage() {
                   Our CRM provides every data-centric app you need with a foundation of the most popular features across Sales Cloud, Service Cloud, Marketing Cloud, Commerce Cloud, and Data Cloud in a streamlined experience - and at no extra cost. From startups to large-scale enterprises, Salesforce has a 360 solution for your unique business.
                 </p>
 
-                <a className="text-white bg-blue-600 hover:bg-blue-700 font-semibold py-3 px-6 rounded inline-flex items-center space-x-2">
+                <Link href="/products" className="text-white bg-blue-600 hover:bg-blue-700 font-semibold py-3 px-6 rounded inline-flex items-center space-x-2">
                   <span>Learn more</span>
                   <FaExternalLinkAlt />
-                </a>
+                </Link>
             </div>
 
             {/* Right Section: Image Content */}
@@ -475,9 +476,9 @@ export default function CreateProductPage() {
         </div>
 
         {/* View More Button */}
-        <a className="relative z-10 mt-8 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all">
+        <Link href="/products" className="relative z-10 mt-8 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all">
           View more stories
-        </a>
+        </Link>
       </Container>
 
       <Container className="relative flex flex-col items-center justify-center py-12 bg-white overflow-hidden">
@@ -491,9 +492,9 @@ export default function CreateProductPage() {
             Every solution in your Customer 360 works together on one platform, so it&apos;s easier for your agents, employees, and data to work together, too. Click on the icons below to learn more.
           </p>
           {/* Watch Demo Button */}
-          <a className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all">
+          <Link href="/products" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all">
             Watch demo
-          </a>
+          </Link>
         </div>
 
         {/* Products Grid Section */}

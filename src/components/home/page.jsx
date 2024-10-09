@@ -23,6 +23,7 @@ import Data from "../../../public/img/home/Data.png"
 
 import { useRouter } from 'next/navigation';
 import { useState } from "react";
+import Link from "next/link";
 
 export const HomePage = () => {
   const router = useRouter();
@@ -194,7 +195,7 @@ export const HomePage = () => {
             </p>
 
             {/* Link */}
-            <a href="/products" className="text-blue-600 hover:text-blue-700 font-semibold">Get started with Agentforce</a>
+            <Link href="/products" className="text-blue-600 hover:text-blue-700 font-semibold">Get started with Agentforce</Link>
           </div>
 
           {/* Card 2 - Data Cloud */}
@@ -222,7 +223,7 @@ export const HomePage = () => {
             </p>
 
             {/* Link */}
-            <a href="/products" className="text-blue-600 hover:text-blue-700 font-semibold">Learn about Data Cloud</a>
+            <Link href="/products" className="text-blue-600 hover:text-blue-700 font-semibold">Learn about Data Cloud</Link>
           </div>
 
           {/* Card 3 - Customer 360 */}
@@ -250,7 +251,7 @@ export const HomePage = () => {
             </p>
 
             {/* Link */}
-            <a href="/products" className="text-blue-600 hover:text-blue-700 font-semibold">Build your Customer 360</a>
+            <Link href="/products" className="text-blue-600 hover:text-blue-700 font-semibold">Build your Customer 360</Link>
           </div>
         </div>
       </Container>
@@ -416,9 +417,9 @@ export const HomePage = () => {
             </p>
 
             {/* Link */}
-            <a href="#" className="text-blue-700 font-semibold hover:underline">
+            <Link href="#" className="text-blue-700 font-semibold hover:underline">
               See customer stories
-            </a>
+            </Link>
           </div>
 
           {/* Second Card */}
@@ -443,9 +444,9 @@ export const HomePage = () => {
             </p>
 
             {/* Link */}
-            <a href="/products" className="text-blue-700 font-semibold hover:underline">
+            <Link href="/products" className="text-blue-700 font-semibold hover:underline">
               Visit our product page
-            </a>
+            </Link>
           </div>
 
           {/* Third Card */}
@@ -470,9 +471,9 @@ export const HomePage = () => {
             </p>
 
             {/* Link */}
-            <a href="#" className="text-blue-700 font-semibold hover:underline">
+            <Link href="#" className="text-blue-700 font-semibold hover:underline">
               Join the community
-            </a>
+            </Link>
           </div>
         </div>
       </Container>      

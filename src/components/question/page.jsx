@@ -18,10 +18,10 @@ function QuestionSection() {
             </p>
 
             {/* Button with Icon */}
-            <a className="text-white bg-blue-600 hover:bg-blue-700 font-semibold py-3 px-6 rounded inline-flex items-center space-x-2">
+            <div className="text-white bg-blue-600 hover:bg-blue-700 font-semibold py-3 px-6 rounded inline-flex items-center space-x-2">
                 <span>Contact us</span>
                 <FaExternalLinkAlt />
-            </a>
+            </div>
         </div>
 
         {/* Image Section */}

@@ -9,6 +9,7 @@ import Newscard2 from '../../../public/img/about-us/Newscard2.jpg';
 import { Container } from '../../components/container/page'
 import { FaExternalLinkAlt } from "react-icons/fa"; // Importing the external link icon
 import { useState } from "react";
+import Link from 'next/link';
 
 function Page() {
     // Data for the executive team members
@@ -96,14 +97,14 @@ function Page() {
                             {/* Text Container */}
                             <p className="italic text-gray-600 text-lg leading-relaxed mb-8">
                                 Editor&apos;s Note: This page was last updated in October 2024. For media inquiries about the history of Salesforce, please contact 
-                                <a href="mailto:PR@salesforce.com" className="underline text-gray-800 hover:text-blue-600 transition-colors"> PR@salesforce.com</a>.
+                                <Link href="mailto:PR@salesforce.com" className="underline text-gray-800 hover:text-blue-600 transition-colors"> PR@salesforce.com</Link>.
                             </p>
                             <h2 className="text-3xl font-bold text-[#0D2B70] mb-4">25 Years of Salesforce News Highlights</h2>
                             <p className="text-lg text-gray-700 mb-4">
                             The below timeline captures the history of Salesforce, including some key milestones along the way, illustrating our record of doing well while doing good.
                             </p>
                             <p className="text-lg text-gray-700 mb-8">
-                            Salesforce is the <a href="#" className="text-blue-600 underline">global leader in CRM</a>, helping companies connect with customers in a whole new way. Founded in 1999, Salesforce enables companies of every size and industry to digitally transform around their customers by harnessing the power of automation, artificial intelligence, and real-time data to make every customer experience more personal, valuable and memorable.
+                            Salesforce is the <Link href="#" className="text-blue-600 underline">global leader in CRM</Link>, helping companies connect with customers in a whole new way. Founded in 1999, Salesforce enables companies of every size and industry to digitally transform around their customers by harnessing the power of automation, artificial intelligence, and real-time data to make every customer experience more personal, valuable and memorable.
                             </p>
                             {/* Additional Content for Left Section */}
                             <h3 className="text-3xl font-bold text-[#0D2B70] mb-4">1999</h3>
@@ -195,7 +196,7 @@ function Page() {
                             <h3 className="text-3xl font-bold text-[#0D2B70] mb-4">2023</h3>
                             <ul className="list-disc pl-6 text-gray-700 mb-4">
                             <li className="mb-2">Einstein, launched at Dreamforce in 2016, generates more than 1 trillion AI-powered predictions per week for customers.</li>
-                            <li className="mb-2">Salesforce introduces the next generation of Einstein AI, <a>Einstein GPT</a>, the world&apos;s first generative AI for CRM.</li>
+                            <li className="mb-2">Salesforce introduces the next generation of Einstein AI, Einstein GPT, the world&apos;s first generative AI for CRM.</li>
                             <li className="mb-2">Salesforce reaches the $5 billion in annual revenue milestone faster than any other enterprise software company.</li>
                             </ul>
 
@@ -258,7 +259,7 @@ function Page() {
                             <div className="space-y-6">
                                 {/* Article 1 */}
                                 <article className="flex items-center">
-                                    <a href="https://www.salesforce.com/news/stories/crm-benchmark/" className="w-28 h-20 flex-shrink-0 rounded-lg overflow-hidden mr-4">
+                                    <Link href="https://www.salesforce.com/news/stories/crm-benchmark/" className="w-28 h-20 flex-shrink-0 rounded-lg overflow-hidden mr-4">
                                         <Image
                                             src={Newscard1}
                                             alt="Salesforce Announces the World's First LLM Benchmark for CRM"
@@ -266,12 +267,12 @@ function Page() {
                                             height={200}
                                             className="w-full h-full object-cover"
                                         />
-                                    </a>
+                                    </Link>
                                     <div className="flex-1">
                                         <h3 className="text-lg font-semibold text-[#0D2B70] leading-tight">
-                                            <a href="https://www.salesforce.com/news/stories/crm-benchmark/" target="_self">
+                                            <Link href="https://www.salesforce.com/news/stories/crm-benchmark/" target="_self">
                                                 Salesforce Announces the World&apos;s First LLM Benchmark for CRM
-                                            </a>
+                                            </Link>
                                         </h3>
                                         <p className="text-sm text-gray-500 mt-1">5 min read</p>
                                     </div>
@@ -279,7 +280,7 @@ function Page() {
 
                                 {/* Article 2 */}
                                 <article className="flex items-center">
-                                    <a href="https://www.salesforce.com/news/stories/video/connections-2024-recap/" className="w-28 h-20 flex-shrink-0 rounded-lg overflow-hidden mr-4">
+                                    <Link href="https://www.salesforce.com/news/stories/video/connections-2024-recap/" className="w-28 h-20 flex-shrink-0 rounded-lg overflow-hidden mr-4">
                                         <Image
                                             src={Newscard2}
                                             alt="Connections 2024: New Marketing and Commerce Innovations Tap AI, Data for Personalized Experiences"
@@ -287,12 +288,12 @@ function Page() {
                                             height={200}
                                             className="w-full h-full object-cover"
                                         />
-                                    </a>
+                                    </Link>
                                     <div className="flex-1">
                                         <h3 className="text-lg font-semibold text-[#0D2B70] leading-tight">
-                                            <a href="https://www.salesforce.com/news/stories/video/connections-2024-recap/" target="_self">
+                                            <Link href="https://www.salesforce.com/news/stories/video/connections-2024-recap/" target="_self">
                                                 Connections 2024: New Marketing and Commerce Innovations Tap AI, Data for Personalized Experiences
-                                            </a>
+                                            </Link>
                                         </h3>
                                         <p className="text-sm text-gray-500 mt-1">1 min read</p>
                                     </div>
@@ -453,10 +454,10 @@ function Page() {
                     </p>
 
                     {/* Link with Icon */}
-                    <a href="#" className="text-[#0D2B70] hover:underline flex items-center space-x-2">
+                    <Link href="#" className="text-[#0D2B70] hover:underline flex items-center space-x-2">
                         <span>Get real-time system updates</span>
                         <FaExternalLinkAlt />
-                    </a> 
+                    </Link> 
                 </div>
             </Container>
                 
@@ -489,9 +490,9 @@ function Page() {
                     </p>
 
                     {/* Link with Icon */}
-                    <a href="#" className="text-[#0D2B70] hover:underline flex items-center space-x-2">
+                    <Link href="#" className="text-[#0D2B70] hover:underline flex items-center space-x-2">
                         Learn how we empower customers
-                    </a> 
+                    </Link> 
                 </div>
             </Container>
 
@@ -524,10 +525,10 @@ function Page() {
                     </p>
 
                     {/* Link with Icon */}
-                    <a href="#" className="text-[#0D2B70] hover:underline flex items-center space-x-2">
+                    <Link href="#" className="text-[#0D2B70] hover:underline flex items-center space-x-2">
                         <span>See our latest product features and updates</span>
                         <FaExternalLinkAlt />
-                    </a>  
+                    </Link>  
                 </div>
             </Container>
 
@@ -560,10 +561,10 @@ function Page() {
                     </p>
 
                     {/* Link with Icon */}
-                    <a href="#" className="text-[#0D2B70] hover:underline flex items-center space-x-2">
+                    <Link href="#" className="text-[#0D2B70] hover:underline flex items-center space-x-2">
                         <span>Learn about our equality initiatives</span>
                         <FaExternalLinkAlt />
-                    </a>  
+                    </Link>  
                 </div>
             </Container>
             
@@ -597,10 +598,10 @@ function Page() {
                     </p>
 
                     {/* Link with Icon */}
-                    <a href="#" className="text-white bg-blue-600 hover:bg-blue-700 font-semibold py-2 px-4 rounded inline-flex items-center space-x-2">
-                    <span>See our values in action</span>
-                    <FaExternalLinkAlt />
-                    </a>
+                    <Link href="#" className="text-white bg-blue-600 hover:bg-blue-700 font-semibold py-2 px-4 rounded inline-flex items-center space-x-2">
+                        <span>See our values in action</span>
+                        <FaExternalLinkAlt />
+                    </Link>
                 </div>
 
                 {/* Image Section */}
