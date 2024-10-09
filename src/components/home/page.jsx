@@ -1,5 +1,4 @@
 'use client'
-
 import Image from "next/image";
 
 import { Container } from "../container/page";
@@ -10,7 +9,7 @@ import heroImg3 from "../../../public/img/home/hero3.png"
 import heroImg4 from "../../../public/img/home/hero6.png"
 
 import heroBg from "../../../public/img/home/hero-bg-1.png"
-import ImageSlider from "../../components/TestimonialSlider/page";
+import ImageSlider from "../TestimonialSlider/page";
 
 // import story cards here
 import storyCard1 from "../../../public/img/home/our-story-card-customer-success.png"
@@ -23,6 +22,7 @@ import CRMApps from "../../../public/img/home/crm-apps.png"
 import Data from "../../../public/img/home/Data.png"
 
 import { useRouter } from 'next/navigation';
+import { useState } from "react";
 
 export const HomePage = () => {
   const router = useRouter();
@@ -31,6 +31,9 @@ export const HomePage = () => {
     router.push(`/${page}`);
   }
 
+  // state to control whether to show the video or the thumbnail
+  const [isVideoVisible, setIsVideoVisible] = useState(false);
+
   return (
     <>
       {/* Home section 1 */}
@@ -38,7 +41,7 @@ export const HomePage = () => {
         <div className="flex items-center w-full lg:w-1/2">
           <div className="max-w-2xl mb-8">
             <h1 style={{ color: '#0D2B70' }} className="text-4xl font-bold leading-snug tracking-tight text-gray-800 lg:text-4xl lg:leading-tight xl:text-6xl xl:leading-tight dark:text-white mb-4">
-              We&apos;re Salesforce, the Customer Company. 
+              We&apos;re Salesforce, the Customer Company.
             </h1>
 
             <p className="text-lg lg:text-xl leading-relaxed text-gray-600 dark:text-gray-300">
@@ -301,20 +304,38 @@ export const HomePage = () => {
         {/* Right Section - Video/Image Content */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
           {/* Placeholder for Video */}
-          <div className="relative w-full lg:max-w-2xl h-auto">
-            {/* Replace src with your video or image source */}
-            <iframe 
-              width="100%" 
-              height="315" 
-              src="https://www.youtube.com/embed/5DsyfLvpr9Q" 
+          {isVideoVisible ? (
+            <iframe
+              width="100%"
+              height="360px"
+              src="https://www.youtube.com/embed/5DsyfLvpr9Q?autoplay=1"
               title="Trust Video"
               frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="rounded-lg shadow-lg"
               loading="lazy"
-            ></iframe>
-          </div>
+            ></iframe> ) : (
+              <div className="lg:w-full w-full relative z-10">
+                <div className="relative h-[200px] lg:h-[360px] w-full rounded-lg overflow-hidden shadow-lg bg-white flex items-center justify-center"> {/* Updated height and centered content */}
+                  <div className="absolute inset-0 flex items-center justify-center"> {/* Centered content */}
+                    {/* Placeholder for Video */}
+                    <button className="bg-white rounded-full p-4 shadow-lg hover:shadow-xl transition border-2 border-[#0070E0]" onClick={() => setIsVideoVisible(true)}>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        width="48"
+                        height="48"
+                        className="text-[#0070E0]"
+                      >
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+          )}
         </div>
       </Container>
 

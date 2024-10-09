@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar  from "../components/navbar/page";
 import { Footer } from "../components/footer/page";
 import QuestionSection from "../components/question/page"
+import ChatButton from '../components/ChatButton/page'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,6 +35,7 @@ export default function RootLayout({
         <Navbar/>
         {children}
         <QuestionSection/>
+        <ChatButton/>
         <Footer/>
       </body>
     </html>

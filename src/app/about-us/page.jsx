@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import Image from "next/image";
 
@@ -6,8 +8,9 @@ import Newscard1 from '../../../public/img/about-us/Newscard1.png';
 import Newscard2 from '../../../public/img/about-us/Newscard2.jpg';
 import { Container } from '../../components/container/page'
 import { FaExternalLinkAlt } from "react-icons/fa"; // Importing the external link icon
+import { useState } from "react";
 
-function page() {
+function Page() {
     // Data for the executive team members
     const executives = [
         { name: "Marc Benioff", position: "Chair, CEO & Co-Founder", company: "Salesforce", imgSrc: "https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2024/01/card-headshot-benioff.png?resize=300,300", description: "Marc Benioff is the founder, Chairman, and CEO of Salesforce. He is a pioneer of cloud computing and a leading voice in corporate responsibility."},
@@ -40,7 +43,11 @@ function page() {
         { name: "Robin L. Washington", position: "Lead Independent Director & Financial Expert, Former EVP & CFO", company: "Gilead Sciences, Inc.", imgSrc: "https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2024/01/card-headshot-washington.png?resize=300,300", description: "Robin L. Washington has a strong background in finance, previously serving as EVP and CFO at Gilead Sciences." },
         { name: "Maynard Webb", position: "Founder", company: "Webb Investment Network", imgSrc: "https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2024/01/card-headshot-webb.png?resize=300,300", description: "Maynard Webb is a prominent tech executive and entrepreneur, founder of the Webb Investment Network, and known for his work in mentoring and advising startups." }
       ];      
-      
+    
+    // state to control whether to show the video or the thumbnail
+    const [isVideoVisible1, setIsVideoVisible1] = useState(false);
+    const [isVideoVisible2, setIsVideoVisible2] = useState(false);
+
     return (
         <>
             {/* Heading Container */}
@@ -108,17 +115,38 @@ function page() {
 
                             {/* Embedded Video */}
                             <div className="w-full flex items-center justify-center mb-4">
-                                <iframe
-                                width="560"
-                                height="315"
-                                src="https://www.youtube.com/embed/Jg7C6UZoc5I"
-                                title="Salesforce Apartment - Short Video"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                                className="rounded-lg shadow-lg"
-                                loading='lazy'
-                                ></iframe>
+                                {isVideoVisible1 ? (
+                                    <iframe
+                                    width="100%"
+                                    height="360px"
+                                    src="https://www.youtube.com/embed/Jg7C6UZoc5I"
+                                    title="Trust Video"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                    className="rounded-lg shadow-lg"
+                                    loading="lazy"
+                                    ></iframe> ) : (
+                                    <div className="lg:w-full w-full relative z-10">
+                                        <div className="relative h-[200px] lg:h-[360px] w-full rounded-lg overflow-hidden shadow-lg bg-white flex items-center justify-center"> {/* Updated height and centered content */}
+                                        <div className="absolute inset-0 flex items-center justify-center"> {/* Centered content */}
+                                            {/* Placeholder for Video */}
+                                            <button className="bg-white rounded-full p-4 shadow-lg hover:shadow-xl transition border-2 border-[#0070E0]" onClick={() => setIsVideoVisible1(true)}>
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="currentColor"
+                                                viewBox="0 0 24 24"
+                                                width="48"
+                                                height="48"
+                                                className="text-[#0070E0]"
+                                            >
+                                                <path d="M8 5v14l11-7z" />
+                                            </svg>
+                                            </button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
 
                             {/* Video Description */}
@@ -173,17 +201,38 @@ function page() {
 
                             {/* Embedded Picture SF Tower */}
                             <div className="w-full flex items-center justify-center mb-4">
-                                <iframe
-                                    width="560"
-                                    height="315"
-                                    src="https://www.youtube.com/embed/av_mzdAUIfQ"
-                                    title="Salesforce Apartment - Short Video"
-                                    frameBorder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowFullScreen
-                                    className="rounded-lg shadow-lg"
-                                    loading='lazy'
-                                ></iframe> 
+                                {isVideoVisible2 ? (
+                                        <iframe
+                                        width="100%"
+                                        height="360px"
+                                        src="https://www.youtube.com/embed/av_mzdAUIfQ"
+                                        title="Trust Video"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowFullScreen
+                                        className="rounded-lg shadow-lg"
+                                        loading="lazy"
+                                        ></iframe> ) : (
+                                        <div className="lg:w-full w-full relative z-10">
+                                            <div className="relative h-[200px] lg:h-[360px] w-full rounded-lg overflow-hidden shadow-lg bg-white flex items-center justify-center"> {/* Updated height and centered content */}
+                                            <div className="absolute inset-0 flex items-center justify-center"> {/* Centered content */}
+                                                {/* Placeholder for Video */}
+                                                <button className="bg-white rounded-full p-4 shadow-lg hover:shadow-xl transition border-2 border-[#0070E0]" onClick={() => setIsVideoVisible2(true)}>
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    fill="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                    width="48"
+                                                    height="48"
+                                                    className="text-[#0070E0]"
+                                                >
+                                                    <path d="M8 5v14l11-7z" />
+                                                </svg>
+                                                </button>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    )}
                             </div>
 
                             {/* Image Description */}
@@ -571,4 +620,4 @@ function page() {
     )
 }
 
-export default page
+export default Page

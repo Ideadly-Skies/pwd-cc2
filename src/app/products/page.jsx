@@ -7,6 +7,7 @@ import AgentForce from "../../../public/img/home/AgentForce.png"
 import CRMApps from "../../../public/img/home/crm-apps.png"
 import Data from "../../../public/img/home/Data.png"
 import { FaExternalLinkAlt } from "react-icons/fa"; // Importing the external link icon
+import { useState } from "react";
 
 // import image
 import iconAI from "../../../public/icons/icon-ai.svg"
@@ -25,6 +26,8 @@ import iconSmallBusiness from "../../../public/icons/icon-small-business.svg"
 import iconTableau from "../../../public/icons/icon-tableau.svg"
 
 export default function CreateProductPage() {
+  const [isVideoVisible, setIsVideoVisible] = useState(false);
+
   const products = [
     { 
       label: 'AI', 
@@ -138,26 +141,41 @@ export default function CreateProductPage() {
           </div>
         </div>
 
-        {/* Right Section */}
+        {/* Video Section */}
         <div className="lg:w-1/2 relative z-10">
-          <div className="relative h-[96px] lg:h-[360px] w-full rounded-lg overflow-hidden shadow-lg bg-white">
-            <div className="absolute inset-0 flex items-center justify-center">
-              {/* Placeholder for Video */}
-              <button className="bg-white rounded-full p-4 shadow-lg hover:shadow-xl transition">
-                {/* Replace with your video player or image */}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  width="48"
-                  height="48"
-                  className="text-[#0070E0]"
-                >
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </button>
-            </div>
-          </div>
+          {/* Placeholder for Video */}
+          {isVideoVisible ? (
+            <iframe
+              width="100%"
+              height="360px"
+              src="https://www.youtube.com/embed/irdNqlytsLc"
+              title="Trust Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="rounded-lg shadow-lg"
+              loading="lazy"
+            ></iframe> ) : (
+              <div className="lg:w-full w-full relative z-10">
+                <div className="relative h-[200px] lg:h-[360px] w-full rounded-lg overflow-hidden shadow-lg bg-white flex items-center justify-center"> {/* Updated height and centered content */}
+                  <div className="absolute inset-0 flex items-center justify-center"> {/* Centered content */}
+                    {/* Placeholder for Video */}
+                    <button className="bg-white rounded-full p-4 shadow-lg hover:shadow-xl transition border-2 border-[#0070E0]" onClick={() => setIsVideoVisible(true)}>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        width="48"
+                        height="48"
+                        className="text-[#0070E0]"
+                      >
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+          )}          
         </div>
         
         {/* Background Image for above container */}
